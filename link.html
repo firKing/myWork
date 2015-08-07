@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<p><a href="#" class="tooltip" title="超链接提示1">提示1</a></p>
+	<p><a href="#" class="tooltip" title="超链接提示2">提示2</a></p>
+	<p><a href="#" title="自带提示1">自带提示1</a></p>
+	<p><a href="#" title="自带提示2">自带提示2</a></p>
+
+	<script type="text/javascript">
+
+	$(function(){
+		$("a.tooltip").mouseover(function(e){
+
+			//鼠标滑入超链接创建div
+			this.mytitle = this.title;
+			$("<div id='tooltip'>"+ this.mytitle +"</div>").appendTo($("body"));
+			this.title = '';
+			console.log(this);
+			console.log($(this));
+
+			//设置div的xy坐标
+			$("#tooltip").css({
+				"top": e.pageY + "px",
+				"left": e.pageX + "px",
+				"position": "absolute"
+			}).show('fast');
+
+			//设置鼠标在连接上移动的效果
+			$("a.tooltip").mousemove(function(event) {
+				$("#tooltip").css({
+					"top": (event.pageY+10) + "px",
+					"left": (event.pageX+20) + "px",
+					"position": "absolute"
+ 				})
+			});
+
+		}).mouseout(function(){
+			this.title = this.mytitle;
+			$("#tooltip").remove();
+		});
+	});
+
+	</script>
+</body>
+</html>

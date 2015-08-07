@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>jQuery动画特效</title>
+    </head>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            background:red;
+            position: relative;
+        }
+    </style>
+    
+    <body>
+        <button id="left">left</button><button id="right">right</button>
+        <div></div>
+    </body>
+    <script>
+        $(function(){
+        //     $("#left").bind('click', function(){
+        //         $("div").animate({left:"+=50px"},1000,function(){console.log("left is ok")});
+        //     });
+        //     $("#right").bind('click', function(){
+        //         $("div").animate({left:"-=50px"},1000,function(){console.log("right is ok")});
+        //     });
+        // 	var div = $("div");
+        // 	div.animate({left: '+=400px'}, 10000)
+        // 	.animate({left: '-=400px'}, 10000);
+
+        // 	$('#left').on('click', function(){
+        // 		div.stop(false, true);
+        // 	});
+
+        // });
+		
+			$("#right").on('click', function(){
+				$(this).next().fadeToggle('slow');
+			});
+		});
+
+    </script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.int{
+		position: relative;
+		width: 300px;
+		height: 15px;
+		margin: 10px 20px;
+	}
+
+	.int *{
+		float: right;
+	}
+	#send{
+		margin-left: 150px;
+	}
+	/*.int::after{
+		display:block;
+		content:"clear";
+		height:0; clear:both;
+		overflow:hidden;
+		visibility:hidden;
+	}*/
+	.high{
+		position: absolute;
+		/*top: 0px;*/
+		margin-left: 20px;
+	}
+	</style>
+</head>
+<body>
+	<form action="#">
+		<div class="int">
+			<input type="text" id="uesrname" class="required">
+			<label for="username">用户名:</label>
+		</div>
+		<div class="int">
+			<input type="password" id="password" class="required">
+			<label for="password">密码:</label>
+		</div>
+		<div class="int">
+			<input type="text" id="email" class="required">
+			<label for="email">邮箱:</label>
+		</div>
+		<div class="int">
+			<input type="text" id="userinfo">
+			<label for="userinfo">个人资料:</label>
+		</div>
+		<div class="sub">
+			<input type="submit" value="提交" id="send">
+			<input type="reset" id="res">
+		</div>
+	</form>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+	$(function(){
+
+		$(".required").each(function(index, el) {
+			var high = $("<strong class='high'>*</strong>").css({position:'absolute',top:0,left:300});
+			$(this).before(high);
+		}); 
+	});
+	</script>
+</body>
+</html>

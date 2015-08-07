@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>拾货
+</title>
+	<!-- <link rel="stylesheet" type="text/css" href="http://202.202.43.41/market/public/css/home/common.css" /> -->
+		<!-- <link rel="stylesheet" type="text/css" href="http://202.202.43.41/market/public/css/home/main.css" /> -->
+        <link rel="stylesheet" type="text/css" href="public/css/main.css">
+        <link rel="stylesheet" type="text/css" href="public/css/common.css">
+	</head>
+<body>
+    <div class="top_bg">
+        <div class="top_de">
+            <a class="to_index" href="http://202.202.43.41/market/index"></a>
+			<a class="top_signin" href="javascript:;">登陆</a>
+		</div>
+    </div>
+    <div id="top_blur" class="top">
+        <div class="top_nav">
+            <ul id="nav_slider" class="nav">
+                <li class="nav_first first_sp">
+                    <a class="first_content" href="http://202.202.43.41/market/index">全部商品分类</a>
+                    <ul class="nav2">
+                        <li class="nav_second">
+                                    <a class="second_content" href="javascript:;"><i class="second_font">&#xe60d;</i>电脑及其配件<i class="right_font">&#xe60b;</i></a>
+
+                                <ul class="nav3">
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/10">笔记本</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/11">台式机</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/12">打印机</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/13">移动硬盘</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/14">U盘</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/15">鼠标</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/16">键盘</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/17">其他</a></li>
+                                    </ul>
+                            </li>
+                        <li class="nav_second">
+                                    <a class="second_content" href="javascript:;"><i class="second_font">&#xe603;</i>图书资料<i class="right_font">&#xe60b;</i></a>
+
+                                <ul class="nav3">
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/18">教材</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/19">辅导书</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/20">杂志</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/21">小说</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/22">动漫</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/23">其他</a></li>
+                                    </ul>
+                            </li>
+                        <li class="nav_second">
+                                    <a class="second_content" href="javascript:;"><i class="second_font">&#xe609;</i>电子产品<i class="right_font">&#xe60b;</i></a>
+
+                                <ul class="nav3">
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/24">手机</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/25">平板</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/26">mp3/mp4</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/27">耳机</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/28">游戏机</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/29">光盘</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/30">音响</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/31">其他</a></li>
+                                    </ul>
+                            </li>
+                        <li class="nav_second">
+                                    <a class="second_content" href="javascript:;"><i class="second_font">&#xe60c;</i>运动健身<i class="right_font">&#xe60b;</i></a>
+
+                                <ul class="nav3">
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/32">球拍</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/33">轮滑</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/34">自行车</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/35">滑板</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/36">健身器材</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/37">游泳用品</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/38">其他</a></li>
+                                    </ul>
+                            </li>
+                        <li class="nav_second">
+                                    <a class="second_content" href="javascript:;"><i class="second_font">&#xe601;</i>日常生活<i class="right_font">&#xe60b;</i></a>
+
+                                <ul class="nav3">
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/39">家具</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/40">网卡</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/41">箱包</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/42">雨伞</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/43">清洁用品</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/44">床上用品</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/45">其他</a></li>
+                                    </ul>
+                            </li>
+                        <li class="nav_second">
+                                    <a class="second_content" href="javascript:;"><i class="second_font">&#xe606;</i>娱乐生活<i class="right_font">&#xe60b;</i></a>
+
+                                <ul class="nav3">
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/46">门票</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/47">电影票</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/48">优惠券</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/49">健身卡</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/50">相机/配件</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/51">乐器</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/52">其他</a></li>
+                                    </ul>
+                            </li>
+                        <li class="nav_second">
+                                    <a class="second_content" href="javascript:;"><i class="second_font">&#xe608;</i>租赁<i class="right_font">&#xe60b;</i></a>
+
+                                <ul class="nav3">
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/53">房屋</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/54">服装</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/55">道具</a></li>
+                                        <li class="nav_third"><a href="http://202.202.43.41/market/classify/56">其他</a></li>
+                                    </ul>
+                            </li>
+                        <li class="nav_second">
+                                <a class="second_content" href="javascript:;"><i class="second_font">&#xe607;</i>衣服鞋袜<i class="right_font">&#xe60b;</i></a>
+
+                            <ul class="nav3">
+                                    <li class="nav_third"><a href="http://202.202.43.41/market/classify/57">上衣</a></li>
+                                    <li class="nav_third"><a href="http://202.202.43.41/market/classify/58">裤子</a></li>
+                                    <li class="nav_third"><a href="http://202.202.43.41/market/classify/59">鞋子</a></li>
+                                    <li class="nav_third"><a href="http://202.202.43.41/market/classify/60">帽子</a></li>
+                                    <li class="nav_third"><a href="http://202.202.43.41/market/classify/61">袜子</a></li>
+                                    <li class="nav_third"><a href="http://202.202.43.41/market/classify/62">围巾</a></li>
+                                    <li class="nav_third"><a href="http://202.202.43.41/market/classify/63">饰品</a></li>
+                                    <li class="nav_third"><a href="http://202.202.43.41/market/classify/64">其他</a></li>
+                                </ul>
+                        </li>
+                        <li class="nav_second">
+                                <a class="second_content" href="http://202.202.43.41/market/classify/9"><i class="second_font">&#xe605;</i>其他<i class="right_font"></i></a>
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="slider nav_first">
+                    <a class="first_content" href="http://202.202.43.41/market/index">首页</a>
+                </li>
+                <li class="slider nav_first">
+                    <a class="first_content" href="http://202.202.43.41/market/boxstore/index">格子铺</a>
+                </li>
+                <li class="slider nav_first">
+                    <a class="first_content" href="http://202.202.43.41/market/exchange/index">换货</a>
+                </li>
+                <li class="slider nav_first">
+                    <a class="first_content" href="http://202.202.43.41/market/original/index">原创货</a>
+                </li>
+                <li class="slider nav_first">
+                    <a class="first_content" href="http://202.202.43.41/market/purchase/index">求购专区</a>
+                </li>
+                <li class="nav_underline"></li>
+            </ul>
+            <form action="http://202.202.43.41/market/search/index" id="searchform" method="get">
+                <div class="search">
+                    <input placeholder="请输入搜索内容" type="text" name="search"/>
+                    <input id="search_sub" type="submit" value="" class="search_sub"/>
+                </div>
+            </form>
+        </div>
+    </div>
+	
+    <div class="main">
+    <div class="main_top">
+	<div class="show_imgs">
+		<div class="container">
+			<div id="allImgs">
+                				<a href="javascript:;">
+					<img src="http://202.202.43.41/market/app/storage/img/banner/1427880031.jpg" class = 'chaImg' />
+				</a>
+                				<a href="javascript:;">
+					<img src="http://202.202.43.41/market/app/storage/img/banner/1427880427.jpg" class = 'chaImg' />
+				</a>
+                				<a href="javascript:;">
+					<img src="http://202.202.43.41/market/app/storage/img/banner/1427908004.jpg" class = 'chaImg' />
+				</a>
+                			</div>
+			<div class="img_txt">
+                				<a href="javascript:;"><p>拾货-重邮全新线上交易平台上线啦!</p></a>
+                				<a href="javascript:;"><p>Duang!你的好铺出现在格子铺啦！</p></a>
+                				<a href="javascript:;"><p>体现自己的原创货 换货里的交换互补</p></a>
+                			</div>
+			<ul>
+                                                        <li class="now"></li>
+                                                                            <li></li>
+                                                                            <li></li>
+                                    			</ul>
+			<div class="button button_left"><a href="javascript:;"><i class="button_font">&#xf0008;</i></a></div>
+			<div class="button button_right"><a href="javascript:;"><i class="button_font">&#xf0007;</i></a></div>
+		</div>
+	</div>
+	<div class="goodshop">
+		<h1>好铺</h1>
+                <a class="change" href="javascript:void(0)"><i class="shop_change">&#xf004c;</i>换一批</a>
+        		<div class="select"></div>
+		<ul class="shop">
+                                                        <li>
+                    <div class="shop_pic">
+                        <a href="http://202.202.43.41/market/boxstore/index">
+							<img src="http://202.202.43.41/market/public/img/home/shop_pic.png">
+						</a>
+                    </div>
+                    <span>可怜可怜我~来抢个格子铺吧</span>
+                </li>
+                                <li>
+                    <div class="shop_pic">
+                        <a href="http://202.202.43.41/market/boxstore/index">
+							<img src="http://202.202.43.41/market/public/img/home/shop_pic.png">
+						</a>
+                    </div>
+                    <span>可怜可怜我~来抢个格子铺吧</span>
+                </li>
+                                <li>
+                    <div class="shop_pic">
+                        <a href="http://202.202.43.41/market/boxstore/index">
+							<img src="http://202.202.43.41/market/public/img/home/shop_pic.png">
+						</a>
+                    </div>
+                    <span>可怜可怜我~来抢个格子铺吧</span>
+                </li>
+                            		</ul>
+	</div>
+</div>
+<div class="main_bottom" id="main_bottom">
+	<div class="bottom_head">
+		<ul class="bottom_order">
+			<li  class="order_now" ><a href="http://202.202.43.41/market/index?type=0#main_bottom">按时间</a></li>
+			<li ><a href="http://202.202.43.41/market/index?type=1#main_bottom">按热度</a></li>
+		</ul>
+	</div>
+	<div class="bottom_line"></div>
+	<div class="bottom_content">
+		<ul class="commodity">
+            
+			<li>
+                <div class="item_box">
+                    <a class="item" href="http://202.202.43.41/market/detail/index/560">
+						<img src="http://202.202.43.41/market/app/storage/img/goods/cj/14383282074065.JPG" width='184px' height='184px' />
+					</a>
+                    <span>全新</span>
+
+                    <div class="price_box">
+                        <h5 class="price">
+                                                        ￥1000
+                                                    </h5>
+                        <div class="tri"></div>
+                    </div>
+                </div>
+                <a class="item_name" href="http://202.202.43.41/market/detail/index/560">ipodtouch5 32G 银色</a>
+                <a class="shop_name" href="http://202.202.43.41/market/others/index/338">Dominik</a>
+            </li>
+            
+			<li>
+                <div class="item_box">
+                    <a class="item" href="http://202.202.43.41/market/detail/index/559">
+						<img src="http://202.202.43.41/market/app/storage/img/goods/cj/14373839036903.png" width='184px' height='184px' />
+					</a>
+                    <span>二手</span>
+
+                    <div class="price_box">
+                        <h5 class="price">
+                                                        ￥2300
+                                                    </h5>
+                        <div class="tri"></div>
+                    </div>
+                </div>
+                <a class="item_name" href="http://202.202.43.41/market/detail/index/559">台式</a>
+                <a class="shop_name" href="http://202.202.43.41/market/others/index/332">经管大学渣</a>
+            </li>
+            
+			<li>
+                <div class="item_box">
+                    <a class="item" href="http://202.202.43.41/market/detail/index/403">
+						<img src="http://202.202.43.41/market/app/storage/img/goods/cj/14346296059081.jpg" width='184px' height='184px' />
+					</a>
+                    <span>二手</span>
+
+                    <div class="price_box">
+                        <h5 class="price">
+                                                        ￥2500
+                                                    </h5>
+                        <div class="tri"></div>
+                    </div>
+                </div>
+                <a class="item_name" href="http://202.202.43.41/market/detail/index/403">2500</a>
+                <a class="shop_name" href="http://202.202.43.41/market/others/index/47">1639928</a>
+            </li>
+            
+			<li>
+                <div class="item_box">
+                    <a class="item" href="http://202.202.43.41/market/detail/index/556">
+						<img src="http://202.202.43.41/market/app/storage/img/goods/cj/14366229184469.jpg" width='184px' height='184px' />
+					</a>
+                    <span>二手</span>
+
+                    <div class="price_box">
+                        <h5 class="price">
+                                                        ￥2500
+                                                    </h5>
+                        <div class="tri"></div>
+                    </div>
+                </div>
+                <a class="item_name" href="http://202.202.43.41/market/detail/index/556">台式机</a>
+                <a class="shop_name" href="http://202.202.43.41/market/others/index/47">1639928</a>
+            </li>
+            
+			<li>
+                <div class="item_box">
+                    <a class="item" href="http://202.202.43.41/market/detail/index/555">
+						<img src="http://202.202.43.41/market/app/storage/img/goods/cj/14363586672191.jpg" width='184px' height='184px' />
+					</a>
+                    <span>全新</span>
+
+                    <div class="price_box">
+                        <h5 class="price">
+                                                        ￥25
+                                                    </h5>
+                        <div class="tri"></div>
+                    </div>
+                </div>
+                <a class="item_name" href="http://202.202.43.41/market/detail/index/555">华为路由器</a>
+                <a class="shop_name" href="http://202.202.43.41/market/others/index/202">1631894</a>
+            </li>
+            
+			<li>
+                <div class="item_box">
+                    <a class="item" href="http://202.202.43.41/market/detail/index/554">
+						<img src="http://202.202.43.41/market/app/storage/img/goods/cj/14363586194790.png" width='184px' height='184px' />
+					</a>
+                    <span>全新</span>
+
+                    <div class="price_box">
+                        <h5 class="price">
+                                                        ￥25
+                                                    </h5>
+                        <div class="tri"></div>
+                    </div>
+                </div>
+                <a class="item_name" href="http://202.202.43.41/market/detail/index/554">水星8孔交换机25</a>
+                <a class="shop_name" href="http://202.202.43.41/market/others/index/202">1631894</a>
+            </li>
+            
+			<li>
+                <div class="item_box">
+                    <a class="item" href="http://202.202.43.41/market/detail/index/553">
+						<img src="http://202.202.43.41/market/app/storage/img/goods/cj/14363420695083.jpg" width='184px' height='184px' />
+					</a>
+                    <span>二手</span>
+
+                    <div class="price_box">
+                        <h5 class="price">
+                                                        ￥10
+                                                    </h5>
+                        <div class="tri"></div>
+                    </div>
+                </div>
+                <a class="item_name" href="http://202.202.43.41/market/detail/index/553">烙铁-长期有效</a>
+                <a class="shop_name" href="http://202.202.43.41/market/others/index/202">1631894</a>
+            </li>
+            
+			<li>
+                <div class="item_box">
+                    <a class="item" href="http://202.202.43.41/market/detail/index/552">
+						<img src="http://202.202.43.41/market/app/storage/img/goods/cj/14363243007855.jpg" width='184px' height='184px' />
+					</a>
+                    <span>全新</span>
+
+                    <div class="price_box">
+                        <h5 class="price">
+                                                        ￥45
+                                                    </h5>
+                        <div class="tri"></div>
+                    </div>
+                </div>
+                <a class="item_name" href="http://202.202.43.41/market/detail/index/552">上网卡，充值卡</a>
+                <a class="shop_name" href="http://202.202.43.41/market/others/index/324">3104203</a>
+            </li>
+            
+			<li>
+                <div class="item_box">
+                    <a class="item" href="http://202.202.43.41/market/detail/index/551">
+						<img src="http://202.202.43.41/market/app/storage/img/goods/cj/14362376278131.jpg" width='184px' height='184px' />
+					</a>
+                    <span>全新</span>
+
+                    <div class="price_box">
+                        <h5 class="price">
+                                                        ￥300
+                                                    </h5>
+                        <div class="tri"></div>
+                    </div>
+                </div>
+                <a class="item_name" href="http://202.202.43.41/market/detail/index/551">活动送的全新新秀丽双肩包，便宜出，可小刀</a>
+                <a class="shop_name" href="http://202.202.43.41/market/others/index/91">1633888</a>
+            </li>
+            
+			<li>
+                <div class="item_box">
+                    <a class="item" href="http://202.202.43.41/market/detail/index/550">
+						<img src="http://202.202.43.41/market/app/storage/img/goods/cj/14361946841244.jpg" width='184px' height='184px' />
+					</a>
+                    <span>二手</span>
+
+                    <div class="price_box">
+                        <h5 class="price">
+                                                        ￥2400
+                                                    </h5>
+                        <div class="tri"></div>
+                    </div>
+                </div>
+                <a class="item_name" href="http://202.202.43.41/market/detail/index/550">性能机出手</a>
+                <a class="shop_name" href="http://202.202.43.41/market/others/index/312">1631166</a>
+            </li>
+            
+			<li>
+                <div class="item_box">
+                    <a class="item" href="http://202.202.43.41/market/detail/index/549">
+						<img src="http://202.202.43.41/market/app/storage/img/goods/cj/14361456438865.jpg" width='184px' height='184px' />
+					</a>
+                    <span>二手</span>
+
+                    <div class="price_box">
+                        <h5 class="price">
+                                                        ￥45
+                                                    </h5>
+                        <div class="tri"></div>
+                    </div>
+                </div>
+                <a class="item_name" href="http://202.202.43.41/market/detail/index/549">电信手机校园网</a>
+                <a class="shop_name" href="http://202.202.43.41/market/others/index/320">3106737</a>
+            </li>
+            
+			<li>
+                <div class="item_box">
+                    <a class="item" href="http://202.202.43.41/market/detail/index/545">
+						<img src="http://202.202.43.41/market/app/storage/img/goods/cj/14360142136098.jpg" width='184px' height='184px' />
+					</a>
+                    <span>二手</span>
+
+                    <div class="price_box">
+                        <h5 class="price">
+                                                        ￥150
+                                                    </h5>
+                        <div class="tri"></div>
+                    </div>
+                </div>
+                <a class="item_name" href="http://202.202.43.41/market/detail/index/545">小米遥控车 150 </a>
+                <a class="shop_name" href="http://202.202.43.41/market/others/index/311">1629583</a>
+            </li>
+            		</ul>
+        
+        	</div>
+</div>
+    
+    </div>
+	
+    <div class="footer">
+        <div class="footer_container">
+            <!--<span>|</span>-->
+            <a class="shake-little" href="http://202.202.43.125">关于红岩网校</a>
+            <span>|</span>
+            <a class="shake-little" href="http://202.202.43.125/aboutus">开发团队</a>
+            <span>|</span>
+            <a class="shake-little" href="http://bbs.cqupt.edu.cn/bbs/forum.php?mod=forumdisplay&fid=99">指出错误</a>
+            <span>|</span>
+            <a class="shake-little" href="http://202.202.43.41/market/admin/login">管理入口</a>
+            <p>地址:重庆市南岸区南山街道崇文路2号重庆邮电大学 联系电话:62461084/62487910</p>
+            <p>本网站由红岩网校工作站负责开发管理,不经红岩网校委员会书面同意,不得进行转载</p>
+        </div>
+    </div>
+
+        <div class="sidebar">
+				<ul class="siderbar_main">
+            <li class="sidebar_first">
+                <a class="sidefirst_content" href="javascript:;">我要发布</a>
+                <ul class="sidebar_pub">
+                    <li class="sidebar_second"><i class="arrow"></i><a href="javascript:;" class="top_signin">发布商品</a></li>
+                    <li class="sidebar_second"><a href="javascript:;" class="top_signin">发布需求</a></li>
+                </ul>
+            </li>
+            <li class="sidebar_first">
+                <a class="sidefirst_content" href="javascript:;"><i class="sidebar_font top_signin" >&#xe602;</i></a>
+                <ul class="sidebar_pub sidebar_collect">
+                    <li class="sidebar_second"><i class="arrow arrow_collect"></i><a href="javascript:;">个人中心</a></li>
+                </ul>
+            </li>
+            <li class="sidebar_first">
+                <a class="sidefirst_content" href="javascript:;"><i class="sidebar_font top_signin" >&#xe604;</i></a>
+                <ul class="sidebar_pub sidebar_collect">
+                    <li class="sidebar_second"><i class="arrow"></i><a href="javascript:;" class="top_signin">我的收藏</a></li>
+                </ul>
+            </li>
+            <li class="sidebar_first">
+                <a class="sidefirst_content sidefirst_mail" href="javascript:;"><i class="sidebar_font top_signin sidebar_mail" >&#xe60a;</i></a>
+                <ul class="sidebar_pub sidebar_collect">
+                        <li class="sidebar_second"><i class="arrow arrow_collect"></i><a href="javascript:;">消息中心</a></li>
+                </ul>
+            </li>
+        </ul>
+		        <div class="to_top">
+            <a class="sidefirst_content" href="javascript:;"><i class="top_font">&#xe600;</i><br/>TOP</a>
+        </div>
+    </div>
+    
+    <div class="login">
+        <div class="login_bg"></div>
+        <div class="login_box">
+            <div class="login_top">
+                <h1>登录</h1>
+                <a href="javascript:;">
+					<img src="http://202.202.43.41/market/public/img/home/login_close.png">
+				</a>
+            </div>
+            <div class="login_bottom">
+                <form action="http://202.202.43.41/market/login" method="post">
+                    <input id="username" class="info" name="username" type="text" placeholder="请输入校园一卡通识别码账号"/>
+                    <input id="password" class="info" name="password" type="password" placeholder="请输入密码(初始为身份证后六位)"/>
+                    <div class="login_line">
+                        <input id="remember" name="remember" type="checkbox" value="1"/>
+                        <label for="remember">记住我</label>
+                        <a class="forget" href="https://sfrz.cqupt.edu.cn:8443/cas/login">忘记密码</a>
+                    </div>
+                    <div class="login_line2">
+						<!--
+                        <a class="sign_up" href="https://sfrz.cqupt.edu.cn:8443/cas/login">注册</a>
+						-->
+                        <input id="submit" type="submit" value="立即登陆"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="http://202.202.43.41/market/public/js/home/jquery-1.8.3.min.js"></script>
+<script src="http://202.202.43.41/market/public/js/home/nav_slide.js"></script>
+<script src = "http://202.202.43.41/market/public/js/home/PlaceHolder.js"></script>
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://202.202.43.41/piwik/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "14"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+
+<script>
+    $(function () {
+        $(window).scroll(function(){
+            if ($(window).scrollTop()>152){
+                $(".sidebar").addClass("sidebar_start")
+            }
+            else
+            {
+                $(".sidebar").removeClass("sidebar_start")
+            }
+
+        });
+
+        $(".to_top").click(function(){
+            $('body,html').animate({scrollTop:0},200);
+            return false;
+        });
+
+        $(".top_signin").on("click",function(){
+            var bg = $(".login_bg");
+            bg.stop().animate({
+                height: "100%",
+                width: "100%"
+            },600,function(){
+                $(".login_box").stop().fadeIn(600)
+            });
+        });
+
+        $(".login_bg,.login_top a").on("click",function(){
+            $(".login_box").stop().fadeOut(600,function(){
+                $(".login_bg").stop().animate({
+                    height: 0,
+                    width: 0
+                },600);
+            })
+        });
+
+        $(".nav").NavSlider({
+            navpos : 0 //设置当前页面所在位置,0-3分别代表首页-求购专区
+        });
+    });
+</script>
+<script src="http://202.202.43.41/market/public/js/home/changeImgs.js"></script>
+<script>
+    $(".bottom_order li").on("click",function(ev){
+        $(".bottom_order li").removeClass("order_now")
+        $(this).addClass("order_now")
+    })
+    //收藏爱心
+    /*
+    $(".shop_heart").on("click",function(ev){
+        var arr = $(this).attr('class');
+        if (arr=="shop_heart collect") {
+            $(this).removeClass('collect');
+        }else{
+            $(this).addClass('collect');
+        }
+    })
+    */
+    function praise(id){
+            alert("请先登录");
+        }
+</script>
+<script>
+    //格子铺换一批
+    $(".change_button").on("click",function(){
+        $.ajax({
+            url:"http://202.202.43.41/market/change-shop",
+            type:"get",
+            success:function(data){
+                //alert(data);
+                var response = $.parseJSON(data);
+                //清空格子铺界面
+                $(".shop").empty();
+                //TODO:修改链接
+                for(var i =0 ; i< response.length ; i++){
+                    //alert(response[i].id);
+                    var str = "";
+                    str+='<li>';
+                    str+='<div class="shop_pic">';
+                    var imgPath = "http://202.202.43.41/market/app/storage/img/head//"+response[i]['user']['image'];
+                    str+='<a href="http://202.202.43.41/market/others/shop/'+response[i]['user']['id']+'"><img src="'+imgPath+'"></a>';
+                    str+='</div>';
+                    str+='<span>店名:'+response[i]['user']['nickname']+'</span>';
+                    if(response[i]['isPraise'])
+                        str+='<a class="shop_num" href="javascript:;"><i class="shop_heart myi_'+response[i]['user']['id']+' collect" onclick="praise('+response[i]['user']['id']+')">&#xe67d;</i><span style="float: none;" id="praise_'+response[i]['user']['id']+'">'+response[i]['user']['praise_count']+'</span>赞</a>';
+                    else
+                        str+='<a class="shop_num" href="javascript:;"><i class="shop_heart myi_'+response[i]['user']['id']+'" onclick="praise('+response[i]['user']['id']+')">&#xe67d;</i><span style="float: none;" id="praise_'+response[i]['user']['id']+'">'+response[i]['user']['praise_count']+'</span>赞</a>';
+                    str+='</li>';
+                    $(".shop").append(str);
+                }
+            }
+        });
+    });
+</script>
+<script>
+    $(".nav2").css("display","block");
+    $(window).scroll(function(){
+        if ($(window).scrollTop()>660){
+            $(".nav2").removeAttr("style");
+            $(".top_bg").css("margin-bottom","44px");
+            $(".top").addClass("top_fix top_fix_index").animate({
+                top:0
+            },200);
+        }
+        else
+        {
+            $(".top").stop(true).removeClass("top_fix top_fix_index").css("top","-44px");
+            $(".nav2").css("display","block");
+            $(".top_bg").removeAttr("style");
+        }
+    });
+</script>
+</html>

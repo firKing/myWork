@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.left{
+			float: left;
+			margin-right: 20px;
+		}
+		form{
+			margin: 30px 30px;
+		}
+		.but{
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<form action="#">
+		<div class="content left">
+			<select name="" id="select1" multiple style="width:100px;height160px;">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select>
+		</div>
+		<div class="content">
+			<select name="" id="select2" multiple style="width:100px;height170px;"></select>
+		</div>
+		<div class="left but">
+			<button id="add">add selected to right</button>
+			<button id="add_all">add all to right</button>
+		</div>
+		
+		<div class=" left but">
+			<button id="remove">add selected to left</button>
+			<button id="remove_all">add all to left</button>
+		</div>
+	</form>
+</body>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+
+		//add selected to right
+		$("#add").click(function(event) {
+			$("#select1 option:selected").appendTo("#select2");
+		});
+		
+		//add all to right
+		$("#add_all").click(function(event) {
+			$("#select1 option").appendTo("#select2");
+		});
+
+	});
+</script>
+</html>

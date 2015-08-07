@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+
+	@font-face {
+		font-family: 'iconfont';
+	    src: url('iconfont.eot'); /* IE9*/
+	    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	    url('iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+	    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+	    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+	}
+
+	.iconfont{
+		font-family:"iconfont";
+		font-size:32px;
+		font-style:normal;
+		color: red;
+	}
+
+
+	</style>
+</head>
+<script type="text/javascript" src="jquery.js"></script>
+<body>
+	<div class="box">
+	<i class="iconfont">&#xf007c</i>
+		<ul class="menu">
+			<li class="level1">
+				<a href="#">衬衫</a>
+				<ul class="level2">
+					<li><a href="">a衬衫</a></li>
+					<li><a href="">b衬衫</a></li>
+					<li><a href="">v衬衫</a></li>
+					<li><a href="">c衬衫</a></li>
+				</ul>
+			</li>
+			<li class="level1">
+				<a href="#">衬衫</a>
+				<ul class="level2">
+					<li><a href="">a衬衫</a></li>
+					<li><a href="">b衬衫</a></li>
+					<li><a href="">v衬衫</a></li>
+					<li><a href="">c衬衫</a></li>
+				</ul>
+			</li>
+			<li class="level1">
+				<a href="#">衬衫</a>
+				<ul class="level2">
+					<li><a href="">a衬衫</a></li>
+					<li><a href="">b衬衫</a></li>
+					<li><a href="">v衬衫</a></li>
+					<li><a href="">c衬衫</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+	$(function(){
+	
+		$(".iconfont").on('click', function(event) {
+			event.preventDefault();
+			$(this).next().toggle('slow');
+		});
+
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	$("button").toggle(
+		function(){
+			alert(1);
+		},
+		function(){
+			alert(2);
+		}
+	);
+
+});
+</script>
+</head>
+<body>
+<button>请点击这里，来切换不同的背景颜色</button>
+</body>
+</html>
