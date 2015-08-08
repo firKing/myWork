@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		td{
+			width: 100px;
+		}
+		th{
+			text-align: left;
+		}
+		.odd{
+			background-color: #ffffee;
+		}
+		.even{
+			background-color: #fff38f;
+		}
+		.selected{
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr><th>*</th>
+				<th>姓名</th>
+				<th>性别</th>
+				<th>暂住地</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>小明</td>
+				<td>男</td>
+				<td>北京</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>小红</td>
+				<td>女</td>
+				<td>重庆</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>小明</td>
+				<td>男</td>
+				<td>北京</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>小红</td>
+				<td>女</td>
+				<td>重庆</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>小明</td>
+				<td>男</td>
+				<td>北京</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>小红</td>
+				<td>女</td>
+				<td>重庆</td>
+			</tr>
+		</tbody>
+	</table>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+	$(function(){
+
+		//隔行变色
+		$("tbody>tr:odd").addClass("odd");
+		$("tbody>tr:even").addClass("even");
+
+		$("tbody>tr").click(function(event) {
+			if ($(this).hasClass('selected')) {
+				$(this).removeClass('selected').find(':checkbox').prop('checked', false);
+			}else{
+				$(this).addClass('selected').find(':checkbox').prop('checked', true);
+			}
+		});
+	});
+	</script>
+</body>
+</html>

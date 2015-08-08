@@ -38,7 +38,7 @@
 <body>
 	<form action="#">
 		<div class="int">
-			<input type="text" id="uesrname" class="required">
+			<input type="text" id="username" class="required">
 			<label for="username">用户名:</label>
 		</div>
 		<div class="int">
@@ -57,15 +57,30 @@
 			<input type="submit" value="提交" id="send">
 			<input type="reset" id="res">
 		</div>
+
 	</form>
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript">
 	$(function(){
 
+		//追加着重符号
 		$(".required").each(function(index, el) {
 			var high = $("<strong class='high'>*</strong>").css({position:'absolute',top:0,left:300});
 			$(this).before(high);
-		}); 
+		});
+
+		//添加验证		
+		$("form :input").blur(function(event) {
+			var $parent = $(this).parent();
+
+			//验证用户名
+			if ($(this).is("#username")) {
+				if ($(this).val() == '' || $(this).val().length < 6) {
+					var errorMsg = '请输入至少6位用户名';
+					$parent.find('.high').html(errorMsg).css({color:'red',width:'200px'});
+				};
+			};
+		});
 	});
 	</script>
 </body>
