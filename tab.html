@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+			float: left;
+			margin-right: 5px;
+			background-color: lightgrey;
+			cursor: pointer;
+		}
+		ul:after{
+			clear: both;
+			content: "";
+			display: block;
+		}
+		.tab{
+			margin: 20px;
+		}
+		.tab_box div{
+			width: 300px;
+			height: 200px;
+			border: 1px solid;
+		}
+		.selected{
+			background-color: green;
+		}
+		.hide{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="tab">
+		<div class="tab_menu">
+			<ul>
+				<li class="selected">时事</li>
+				<li>新闻</li>
+				<li>娱乐</li>
+			</ul>
+		</div>
+		<div class="tab_box">
+			<div>时事</div>
+			<div class="hide">新闻</div>
+			<div class="hide">娱乐</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		 $("li").click(function(event) {
+			$(this).addClass('selected').siblings().removeClass('selected');
+
+			var index = $("li").index(this);
+			$(".tab_box > div").eq(index).show().siblings().hide();
+		});
+	});
+	</script>
+</body>
+</html>
