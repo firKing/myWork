@@ -17,6 +17,9 @@
 			background-color: #fff38f;
 		}
 		.selected{
+			background-color: yellow;
+		}
+		.parent{
 			background-color: green;
 		}
 	</style>
@@ -24,44 +27,55 @@
 <body>
 	<table>
 		<thead>
-			<tr><th>*</th>
+			<tr>
+				<label for="filterName">筛选：</label>
+				<input type="text" id="filterName">
+			</tr>
+			<tr>
+				<th>*</th>
 				<th>姓名</th>
 				<th>性别</th>
 				<th>暂住地</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
+			<tr class="parent" id="row_01">
+				<td colspan="4">前台设计组</td>
+			</tr>
+			<tr class="child_row_01">
 				<td><input type="checkbox"></td>
 				<td>小明</td>
 				<td>男</td>
 				<td>北京</td>
 			</tr>
-			<tr>
+			<tr class="child_row_01">
 				<td><input type="checkbox"></td>
 				<td>小红</td>
 				<td>女</td>
 				<td>重庆</td>
 			</tr>
-			<tr>
+			<tr class="child_row_01">
 				<td><input type="checkbox"></td>
 				<td>小明</td>
 				<td>男</td>
 				<td>北京</td>
 			</tr>
-			<tr>
+			<tr class="parent" id="row_02">
+				<td colspan="4">前台开发组</td>
+			</tr>
+			<tr class="child_row_02">
 				<td><input type="checkbox"></td>
 				<td>小红</td>
 				<td>女</td>
 				<td>重庆</td>
 			</tr>
-			<tr>
+			<tr class="child_row_02">
 				<td><input type="checkbox"></td>
 				<td>小明</td>
 				<td>男</td>
 				<td>北京</td>
 			</tr>
-			<tr>
+			<tr class="child_row_02">
 				<td><input type="checkbox"></td>
 				<td>小红</td>
 				<td>女</td>
@@ -83,6 +97,18 @@
 			}else{
 				$(this).addClass('selected').find(':checkbox').prop('checked', true);
 			}
+		});
+
+		//表格折叠
+		$("tr.parent").click(function(event) {
+			$(this).toggleClass('selected')
+			.siblings('.child_'+this.id).toggle();
+		});
+
+		//筛选
+		$("#filterName").keyup(function(event) {
+			$("tbody tr").hide()
+			.filter(":contains('"+( $(this).val() )+"')").show();
 		});
 	});
 	</script>
