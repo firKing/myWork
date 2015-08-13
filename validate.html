@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.int{
+		position: relative;
+		width: 300px;
+		height: 15px;
+		margin: 10px 20px;
+	}
+
+	/*.int input{
+		float: right;
+	}*/
+	label.error{
+		float: none;
+		color: red;
+		padding-left: .5em;
+		vertical-align: top;
+	}
+	#send{
+		margin-left: 150px;
+	}
+	/*.int::after{
+		display:block;
+		content:"clear";
+		height:0; clear:both;
+		overflow:hidden;
+		visibility:hidden;
+	}*/
+	.high{
+		position: absolute;
+		/*top: 0px;*/
+		margin-left: 20px;
+	}
+	</style>
+</head>
+<body>
+	<form action="#">
+		<div class="int">
+			<label for="username">用户名:</label>
+			<input type="text" id="username" class="required">
+		</div>
+		<div class="int">
+			<label for="password">密码:</label>
+			<input type="password" id="password" class="required">
+		</div>
+		<div class="int">
+			<label for="email">邮箱:</label>
+			<input type="text" id="email" class="required">
+		</div>
+		<div class="int">
+			<label for="userinfo">个人资料:</label>
+			<input type="text" id="userinfo">
+		</div>
+		<div class="sub">
+			<input type="submit" value="提交" id="send">
+			<input type="reset" id="res">
+		</div>
+
+	</form>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jqueryPlugins/jquery.validate.js"></script>
+	<script type="text/javascript">
+	$(function(){
+
+		//追加着重符号
+		$(".required").each(function(index, el) {
+			var high = $("<strong class='high'>*</strong>").css({position:'absolute',top:0,left:300});
+			$(this).before(high);
+		});
+
+		$("form").validate();
+	});
+	</script>
+</body>
+</html>
