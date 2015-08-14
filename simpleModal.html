@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#basic-dialog-warn{
+			background-color: lightgray;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<button id="a">aaa</button>
+	<p>ddddddddddddddfvvvvvvvvvvvvvvvrrrrrrrrrrrrrrr</p>
+	<div id="basic-dialog-warn">
+		<!-- 普通弹出层 -->
+		<div class="box-title show"><h2>提示</h2></div>
+		<div class="box-main">
+			<div class="tips">
+				<span class="tip-ico">
+					<span class="ico-warn"><!-- 图标 --></span>
+				</span>
+				<div class="tips-content">
+					<div class="tips-title">系统繁忙, 请稍后重试</div>
+					<div class="tips-line"></div>
+				</div>
+			</div>
+			<div class="box-buttons"><button class="simplemodal-close" type="button">关闭</button></div>
+		</div>
+		<!-- 普通弹出层 -->
+	</div>
+	<script type="text/javascript" src='jquery.js'></script>
+	<script type="text/javascript" src='jqueryPlugins/jquery.simplemodal.js'></script>
+	<script type="text/javascript">
+
+		$(function(){
+			$("#basic-dialog-warn").modal({
+				"opacity": 1,
+				"overlayClose": false
+			});
+
+			$("#a").on('click', function(event) {
+				event.preventDefault();
+				alert(1);
+			});
+		});
+
+	</script>
+</body>
+</html>
