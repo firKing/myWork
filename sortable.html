@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#myList{
+			width: 80px;
+			background-color: #eee;
+			padding: 5px;
+		}
+		#myList a{
+			text-decoration: none;
+			color: #0077b0;
+		}
+		#myList a:hover{
+			text-decoration: underline;
+		}
+		#myList .qlink{
+			font-size: 12px;
+			color: #666;
+			margin-left: 10px;
+		}
+	</style>
+</head>
+<body>
+	<ul id="myList">
+		<li><a href="#">心情</a></li>
+		<li>
+			<a href="#">相册</a>
+			<a href="#" class="qlink">上传</a>
+		</li>
+		<li>
+			<a href="#">日志</a>
+			<a href="#" class="qlink">发表</a>
+		</li>
+		<li><a href="#">投票</a></li>
+		<li><a href="#">分享</a></li>
+		<li><a href="#">群组</a></li>
+	</ul>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jqueryPlugins/jquery-ui.js"></script>
+	<script type="text/javascript">
+
+	$(function(){
+		$("#myList").sortable();
+	});
+
+	</script>
+</body>
+</html>
