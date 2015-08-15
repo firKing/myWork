@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>ajax</title>
-	<script type="text/javascript" src="/Ajax/Application/Home/Public/js/jquery.js"></script>
+	<script type="text/javascript" src="/ajax/Application/Home/Public/js/jquery.js"></script>
+	<script type="text/javascript" src="/ajax/Application/Home/Public/js/jquery.cookie.js"></script>
 	<style type="text/css">
 		*{
 			margin: 0;
@@ -37,6 +38,7 @@
 		<div class="int">
 			<label for="username">姓名:</label>
 			<input type="text" id="username" name="username">
+			<input type="checkbox" id="check"> 记住名字
 		</div>
 		<div class="int">
 			<label for="content">内容:</label>
@@ -55,6 +57,23 @@
 			$.post("<?php echo U('Home/Index/ajaxHandle');?>", $("form").serialize(), function(data, textStatus, xhr) {
 				$("<div class='message'><span class='name'>"+ data.username +"</span>:<p>"+ data.content +"</p></div>").appendTo(".allMsg");
 			});
+		});
+
+
+		//添加cookie
+		var COOKIE_NAME = 'username';
+
+		if ( $.cookie(COOKIE_NAME) ) {
+			$("#username").val( $.cookie(COOKIE_NAME) );
+			$("#check").prop('checked', true);
+		};
+
+		$("#check").click(function(event) {
+			if (this.checked) {
+				$.cookie(COOKIE_NAME, $("#username").val(), { expires: 7 });
+			}else{
+				$.removeCookie(COOKIE_NAME);
+			}
 		});
 		
 	});

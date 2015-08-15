@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cookie</title>
+</head>
+<body>
+	用户名: <input type="text" name="username" id="username"> <br/>
+	<input type="checkbox" name="check" id="check">记住用户名
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jqueryPlugins/jquery.cookie.js"></script>
+	<script type="text/javascript">
+
+	$(function(){
+
+		$.cookie('nameadf', 'adfawe4f', { expires: 7 });
+
+		console.log($.cookie('nameadfa', 'asdfa', { expires: 1 }));
+		console.log($.cookie('nameadfa'));
+
+		// var COOKIE_NAME = 'usad';
+
+		// console.log($.cookie(COOKIE_NAME));
+
+
+		// if ( $.cookie(COOKIE_NAME) ) {
+		// 	console.log(1);
+		// 	$("#username").val( $.cookie(COOKIE_NAME) );
+		// };
+
+		// $("#check").click(function(event) {
+		// 	if (this.checked) {
+		// 		console.log($("#username").val());
+		// 		$.cookie(COOKIE_NAME, $("#username").val(), { expires: 7 });
+		// 		console.log(3);
+		// 		console.log($.cookie(COOKIE_NAME));
+		// 	}else{
+		// 		$.cookie(COOKIE_NAME, null, {path: '/'});
+		// 	}
+		// });
+	});
+
+	</script>
+</body>
+</html>
