@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>minute</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.title{
+		width: 327px;
+		margin: 40px auto;
+	}
+	#clickMe{
+		position: absolute;
+		margin: auto;
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		border-radius: 100px;
+	}
+
+	</style>
+</head>
+<body>
+	<!-- <div class="title">看你三秒钟能点多少下</div> -->
+	<h1 class="title">看你三秒钟能点多少下</h1>
+	<div id="clickMe"></div>
+	<div id="result"></div>
+	<script src ="jquery.js"></script>
+	<script>
+	$(function(){
+
+		// 圆的位置
+		var pageY = $(window).height();
+		var pageX = $(window).width();
+
+		var finalTop = pageY/2 - 100 + 'px';
+		var finalLeft = pageX/2 - 50 + 'px';
+
+		$('#clickMe').css('top', finalTop).css('left', finalLeft);
+
+		//结果的位置
+		var finalTopb = pageY/2 + 20 + 'px';
+		var finalLeftb = pageX/2 - 152/2 + 'px';
+		$("#result").css('position', 'absolute').css('top', finalTopb).css('left', finalLeftb);
+
+		counter = 0;
+
+			// $("#clickMe").on('touchstart', handle);
+			$("#clickMe").on('click',handle);
+
+			function handle(event) {
+				event.preventDefault();
+
+				if (counter == 0) {
+					counter ++;
+					
+					setTimeout(function(){
+						$("#clickMe").off();
+						$("#result").html("您三秒钟点击了 " + counter + " 下");
+						counter = 1;
+					}, 3000);
+				}else{
+					counter ++;
+				}
+			}
+	});
+	</script>
+</body>
+</html>
