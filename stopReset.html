@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" id="form1">
+		<input type="text">
+		<input type="reset">
+		<input type="submit">
+	</form>
+	<script src="EventUtil.js"></script>
+	<script>
+		var form = document.getElementById('form1');
+
+		EventUtil.addHandler(form, "reset", function(event){
+			event = EventUtil.getEvent(event);
+
+			EventUtil.preventDefault(event);
+		});
+
+	</script>
+</body>
+</html>
