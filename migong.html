@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>migong</title>
+	<style>
+	.rowDiv{
+		height: 40px;
+		margin-top: 2px;
+	}
+	.colDiv{
+		border: 1px solid;
+		width: 40px;
+		height: 40px;
+		float: left;
+	}
+	.black{
+		background-color: black;
+	}
+	.white{
+		background-color: white;
+	}
+	.red{
+		background-color: red;
+	}
+	</style>
+</head>
+<body>
+	
+</body>
+<script src="jquery.js"></script>
+<script>
+
+var map = [ [0,0,0,1,0,0,0,0,0,],
+			[0,0,0,1,0,0,1,0,0,],
+			[0,0,1,1,0,1,1,1,0,],
+			[0,0,0,1,0,1,0,1,0,],
+			[0,1,1,1,1,1,0,1,0,],
+			[0,1,0,0,0,0,1,1,0,],
+			[0,1,0,1,0,0,1,0,0,],
+			[0,1,1,0,1,1,1,0,1,],
+			[0,0,1,0,0,0,0,0,1,]];
+
+var mark = [];
+
+function startMap(map){
+
+	for (var i = 0; i < map.length; i++) {
+		var rowDiv = $('<div></div>').addClass('rowDiv');
+		$('body').append(rowDiv);
+		for (var j = 0; j < map[i].length; j++) {
+			var colDiv = $('<div></div>').addClass('colDiv').addClass(i +''+ j);
+			rowDiv.append(colDiv);
+			if(map[i][j] == 1){
+				colDiv.addClass('white');
+			}else{
+				colDiv.addClass('black');
+			}
+		};
+	};
+};
+
+function gameBegin(map){
+	var beginNum = findStart(map);
+
+	changeColor(beginNum);
+	beginMove(beginNum);
+}
+
+function findStart(map){
+	for (var i = 0; i < map[0].length; i++) {
+		if (map[0][i] == 1) {
+			return '0'+i;
+		};
+	};
+}
+
+function changeColor(num){
+	$('.'+ num).addClass('red');
+}
+
+function beginMove(beginNum){
+
+	$('.'+beginNum).addClass('no');
+
+	mark.push(beginNum);
+	console.log(mark);
+	
+	var intX = parseInt(beginNum[0]);
+	var intY = parseInt(beginNum[1]);
+
+	if (intX < 8 && intX >= 0 && intY >= 0 && intY < 8 ) {
+		var right = intX+''+(intY+1);
+	    var down = (intX+1)+''+intY;
+	    var left = intX+''+(intY-1);
+	    var up = (intX-1)+''+intY;
+
+	    // direct([right, down, left, up], beginNum);
+
+	    if($('.'+right).hasClass('white') && !($('.'+right).hasClass('no'))) {
+			changeColor(right);
+			setTimeout(function(){
+				beginMove(right)
+			}, 1000);
+			$('.'+beginNum).removeClass('red');
+
+		}else if($('.'+down).hasClass('white') && !($('.'+down).hasClass('no'))) {
+			changeColor(down);
+			setTimeout(function(){
+				beginMove(down)
+			}, 1000);
+			$('.'+beginNum).removeClass('red');
+
+		}else if($('.'+left).hasClass('white') && !($('.'+left).hasClass('no'))) {
+			changeColor(left);
+			setTimeout(function(){
+				beginMove(left)
+			}, 1000);
+			$('.'+beginNum).removeClass('red');
+
+		}else if($('.'+up).hasClass('white') && !($('.'+up).hasClass('no'))) {
+			changeColor(up);
+			setTimeout(function(){
+				beginMove(up)
+			}, 1000);
+			$('.'+beginNum).removeClass('red');
+		}else{
+			var back = mark[mark.length-2];
+			mark.pop();
+			mark.pop();
+			changeColor(back);
+			setTimeout(function(){
+				beginMove(back)
+			}, 1000);
+			$('.'+beginNum).removeClass('red');
+		}
+	    
+	}else{
+		return false;
+	}
+}
+// function direct(dir, beginNum){
+// 	for (var i = 0; i < dir.length; i++) {
+// 		console.log();
+// 		if($('.'+dir[i]).hasClass('white') && !($(dir[i]).hasClass('no'))) {
+// 			changeColor(dir[i]);
+// 			var dia = dir[i];
+// 			setTimeout(function(){
+// 				beginMove(dia)
+// 				console.log(dia);
+// 			}, 1000);
+// 			$('.'+beginNum).removeClass('red');
+
+// 		}
+// 	};
+// }
+
+
+startMap(map);
+gameBegin(map);
+</script>
+</html>
