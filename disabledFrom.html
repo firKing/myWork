@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="#" id="form1">
+		<input type="text">
+		<input type="submit" name="sub-btn">
+	</form>
+<script src="EventUtil.js"></script>
+<script>
+	var form  = document.getElementById("form1");
+
+	EventUtil.addHandler(form, "submit", function(event){
+		var event = EventUtil.getEvent(event);
+		var target = EventUtil.getTarget(event);
+		
+		var btn = target.elements['sub-btn'];
+
+		btn.disabled = true;
+	});
+	console.log('<1></1>');
+</script>
+</body>
+</html>
