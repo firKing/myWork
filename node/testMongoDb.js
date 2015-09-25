@@ -47,10 +47,11 @@ db.once('open', function(){
 	// 		});
 
 	// 根据姓名查找 ##静态方法##
-	PersonModel.findByName('kin',function(err,persons){
-    	persons.forEach(function(element, index){
-    		console.log(element);
-    	});
+	PersonModel.findByName('peter',function(err,persons){
+		if(err != null){
+			console.log(err);
+		}
+    	console.log(persons);
   	});
 
 
@@ -59,6 +60,12 @@ db.once('open', function(){
 		console.log(persons);
 	});
 
-	kim.speak();
-	key.speak();
+	// update 更新修改
+	// PersonModel.update({name:'peter'}, {$set: {'name': 'tom'}}, function(err){
+	// 	console.log(err);
+	// });
+
+
+	// kim.speak();
+	// key.speak();
 });
