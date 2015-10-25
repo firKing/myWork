@@ -1,0 +1,30 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "my webpack test",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "webpack": "^1.12.2"
+  },
+  "devDependencies": {
+    "react": "^0.14.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firKing/myWork.git"
+  },
+  "author": "firK1n",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/firKing/myWork/issues"
+  },
+  "homepage": "https://github.com/firKing/myWork#readme",
+  "keywords": [
+    "webpack",
+    "test"
+  ]
+}
