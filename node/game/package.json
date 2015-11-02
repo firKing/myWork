@@ -1,25 +1,39 @@
 {
-  "name": "game",
+  "name": "react-tab-selector",
   "version": "1.0.0",
-  "description": "a game",
-  "main": "index.js",
+  "description": "A sample component with React.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/supnate/react-tab-selector.git"
   },
   "keywords": [
-    "js"
+    "react",
+    "reactjs",
+    "hot",
+    "reload",
+    "edit",
+    "webpack"
   ],
-  "author": "firK1n",
-  "license": "ISC",
+  "author": "Nate Wang <supnate@gmail.com> (http://github.com/supnate)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/supnate/react-tab-selector/issues"
+  },
+  "homepage": "https://github.com/supnate/react-tab-selector",
   "devDependencies": {
-    "css-loader": "^0.21.0",
-    "extract-text-webpack-plugin": "^0.8.2",
-    "file-loader": "^0.8.4",
-    "jsx-loader": "^0.13.2",
-    "node-sass": "^3.4.1",
-    "sass-loader": "^3.1.1",
-    "style-loader": "^0.13.0",
-    "url-loader": "^0.5.6",
-    "webpack": "^1.12.2"
+    "babel-loader": "^6.0.1",
+    "css-loader": "^0.15.0",
+    "jsx-loader": "^0.12.2",
+    "path": "^0.12.7",
+    "react-hot-loader": "^1.1.1",
+    "style-loader": "^0.12.4",
+    "webpack": "^1.5.1",
+    "webpack-dev-server": "1.6.4"
+  },
+  "dependencies": {
+    "react": "^0.12.0"
   }
 }
