@@ -10,8 +10,8 @@ export default class Image extends Component {
         this.oldTarget = {};
         this.handleOnClick = this.handleOnClick.bind(this);
 
-        this.c = 0;
-        this.t = null;
+        this.total = 0;
+        this.tick = this.tick.bind(this);
         this.gameBegin = this.gameBegin.bind(this);
     }
 
@@ -29,6 +29,7 @@ export default class Image extends Component {
         return Math.random()>.5 ? -1 : 1;
     }
 
+    // 处理图片点击事件
     handleOnClick(evt) {
         if (this.state.selected) {
             let cc = evt.target.getAttribute('src');
@@ -44,23 +45,23 @@ export default class Image extends Component {
         this.state.selected = !this.state.selected;
     }
 
-    Print() {
-        console.log("我在打印!");  
-        this.t = setTimeout(this.Print(),1000);//开始计时器,调用自己,进行无穷循环  
+    //计时器
+    tick() {
+        let p = document.getElementById('timer');
+        p.innerHTML = this.total;
+        this.total += 1;
     }
-    // var timer;//该值表示要取消延迟执行的代码块
-  
-            //开始打印
-  
-    gameBegin() {  
-        this.Print();    //调用打印方法
-    }  
-  
-            //结束打印  
-  
-    StopPrint() {  
-        clearTimeout(this.t);    //取消计时器
-    }  
+
+    // 游戏开始, 开始计时
+    gameBegin() {
+        this.total += 1;
+        this.interval = setInterval(this.tick, 1000);
+    }
+
+    // 终止计时
+    clearTimer() {
+         clearInterval(this.interval);
+    }
 
     render() {
         var imgs = this.props.data.map(function (item) {
@@ -76,7 +77,7 @@ export default class Image extends Component {
 
         return (
             <div className="tab-selector">
-                <div className='begin'>{beginButton}<p id='timer'>0</p></div>
+                <div className='begin'>{beginButton}<p>用时 <span id='timer'>0</span> 秒</p></div>
                 {this.getUlImg(imgsRandom, 8)}
             </div>
         );
