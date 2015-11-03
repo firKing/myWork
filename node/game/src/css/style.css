@@ -16,6 +16,9 @@ img {
   width: 120px;
   height: 120px;
 }
+.begin{
+  margin-bottom: 20px;
+}
 
 .tab-selector {
   margin: 50px;
