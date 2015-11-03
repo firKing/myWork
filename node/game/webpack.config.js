@@ -2,22 +2,23 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-  // entry: './js/entry.js',
+  devtool: 'eval',
   entry: [
     'webpack-dev-server/client?http://127.0.0.1:3000', // WebpackDevServer host and port
     'webpack/hot/only-dev-server',
     './src/js/index.js' // Your appʼs entry point
   ],
   output: {
-    path: __dirname + '/build/',
-    publicPath: '/build/',
-    filename: 'bundle.js'
+    path: path.join(__dirname, 'build'),
+    filename: 'bundle.js',
+    publicPath: '/static/'
   },
   module: {
     loaders: [
-      { test: /\.css$/, loader: 'style!css' },
-      { test: /\.js$/, loader: 'jsx-loader?harmony' },
-      { test: /\.jsx?$/, loaders: ['react-hot', 'jsx?harmony'], exclude: /node_modules/ }
+      { test: /\.less$/, loader: 'style-loader!css-loader!less-loader' },
+      { test: /\.css$/, loader: 'style-loader!css-loader' },
+      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'},
+      { test: /\.js?$/, loaders: ['react-hot', 'babel'], include: [path.join(__dirname, 'src/js')]}
     ]
   },
   resolve: {
