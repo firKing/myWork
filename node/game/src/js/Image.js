@@ -13,6 +13,7 @@ export default class Image extends Component {
         this.total = 0;
         this.tick = this.tick.bind(this);
         this.gameBegin = this.gameBegin.bind(this);
+        this.clearTimer = this.clearTimer.bind(this);
     }
 
     // 把数据分行, 每行n个
@@ -73,11 +74,13 @@ export default class Image extends Component {
 
         var imgsRandom = imgs.sort(this.randomSort);
 
-        var beginButton = (<button onClick = {this.gameBegin}>游戏开始</button>);
+        var beginButton = (<button onClick = {this.gameBegin}>开始计时</button>);
+
+        var endButton = (<button onClick = {this.clearTimer}>停止计时</button>)
 
         return (
             <div className="tab-selector">
-                <div className='begin'>{beginButton}<p>用时 <span id='timer'>0</span> 秒</p></div>
+                <div className='begin'>{beginButton}{endButton}<p>用时 <span id='timer'>0</span> 秒</p></div>
                 {this.getUlImg(imgsRandom, 8)}
             </div>
         );
